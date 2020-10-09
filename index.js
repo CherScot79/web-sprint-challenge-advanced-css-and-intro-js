@@ -227,7 +227,7 @@ Create a function called `getArtistByIndex` that takes two arguments:
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(array, index) {
-  return `The artist at index ${array[index].id} is ${array[index].name}`;
+  return `the artist at index ${array[index].id} is ${array[index].name}`;
 }
 console.log(getArtistByIndex(artists, 1));
   
@@ -261,7 +261,7 @@ Create a function called `removeArtist` that takes two arguments:
 function removeArtist(array, index) {
   artists.splice(index, 1);
 }
-removeArtist(artists,0);
+removeArtist(artists, 3);
 console.log(artists);
    
 
@@ -358,8 +358,13 @@ function randomize(/* Code here */){
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
  Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
 
- 
- 
+ const centNineteenTo2000 = artists.filter(function(item){
+   if(item.years <= 1900 && item.years < 2000){
+     return item.name;
+   }
+ })
+ console.log(centNineteenTo2000);
+
  
  /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
  function foo(){
